@@ -4,7 +4,7 @@ pipeline {
         PROJECT = credentials('project_id')
         REPO_PATH= credentials("repo_path") // secret text for the repo path. I set it manually in Jenkins credentials
         APP_NAME = "binarycalculatorwebapp"
-        IMAGE_TAG = "$REPO_PATH/$APP_NAME"
+        IMAGE_TAG = "gcr.io/$PROJECT/$APP_NAME"
         CLUSTER = credentials("cluster_name") // secret text for the cluster name. I set it manually in Jenkins credentials
         CLUSTER_ZONE = credentials("cluster_zone") // secret text for the cluster zone. I set it manually in Jenkins credentials
     }
